@@ -141,12 +141,6 @@ TRANSLATIONS += \
     i18n/it_IT.ts \
     i18n/ru_RU.ts
 
-# Автоматически генерировать .qm файлы при сборке
-QMAKE_EXTRA_TARGETS += translations
-translations.target = translations
-translations.commands = lrelease $$PWD/i18n/*.ts
-QMAKE_POST_LINK += $$translations.commands
-
 DISTFILES += \
     i18n/it_IT.qm \
     i18n/ru_RU.qm
