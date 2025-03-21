@@ -2,8 +2,10 @@
 Name=WhatSie
 GenericName[it]=Client Qt per WhatsApp Web
 GenericName=Qt WhatsApp Web Client
+GenericName[ru]=Веб-клиент для WhatsApp
 Comment[it]=Un Client per WhatsApp Web basato su QT
 Comment=A WhatsApp Web Client using the QT framework
+Comment[ru]Веб-клиент WhatsApp, использующий фреймворк QT.
 Icon=com.ktechpit.whatsie
 Exec=whatsie %u
 Terminal=false
@@ -20,24 +22,29 @@ Actions=Chat;Settings;Theme;Lock;About;
 [Desktop Action Chat]
 Name[it]=Nuova Chat
 Name=New Chat
+Name[ru]=Новый чат
 Exec=whatsie -n
 
 [Desktop Action Theme]
 Name[it]=Cambia tema
 Name=Toggle theme
+Name[ru]=Сменить цвет темы
 Exec=whatsie -t
 
 [Desktop Action Settings]
 Name[it]=Impostazioni
 Name=Settings
+Name[ru]=Настройки
 Exec=whatsie -s
 
 [Desktop Action Lock]
 Name[it]=Blocca
 Name=Lock
+Name[ru]=Блокировка
 Exec=whatsie -l
 
 [Desktop Action About]
 Name[it]=Info
 Name=About
+Name[ru]=О приложении
 Exec=whatsie -i

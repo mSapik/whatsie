@@ -5,6 +5,7 @@
 	<project_license>MIT</project_license>
 	<name>Whatsie</name>
 	<summary>Qt Whatsapp Web Client for Linux Desktop</summary>
+	<summary>Qt Whatsapp Web Client for Linux Desktop</summary>
 	<developer_name>Keshav Bhatt</developer_name>
 	<branding>
 		<color type="primary" scheme_preference="light">#77a27d</color>
