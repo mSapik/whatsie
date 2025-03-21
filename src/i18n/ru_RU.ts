@@ -842,6 +842,7 @@ Please setup the password in the Settings first.</source>
     <message>
         <location filename="../settingswidget.ui" line="791"/>
         <location filename="../settingswidget.ui" line="825"/>
+        <location filename="../settingswidget.cpp" line="851"/>
         <source>Change password</source>
         <translation>Изменить пароль</translation>
     </message>
@@ -917,9 +918,39 @@ Please setup the password in the Settings first.</source>
         <translation>Действие</translation>
     </message>
     <message>
+        <location filename="../settingswidget.cpp" line="362"/>
+        <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
+        <translation>Это удалит Постоянные Данные! Постоянные данные включают в себя постоянные куки и кэш, а также завершит работу приложения.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="367"/>
+        <source>Delete Cookies and Quit Application?</source>
+        <translation>Удалить куки и выйти из приложения?</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="469"/>
+        <source>Error</source>
+        <translation>Ошибка</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="470"/>
+        <source>Cannot set an empty UserAgent String.</source>
+        <translation>Невозможно установить пустую строку UserAgent.</translation>
+    </message>
+    <message>
         <location filename="../settingswidget.cpp" line="515"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>Автоматическое переключение темы отключено из-за ручного переключения темы.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="554"/>
+        <source>App lock is not configured.</source>
+        <translation>Блокировка приложения не настроена.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="558"/>
+        <source>Do you want to setup App lock now?</source>
+        <translation>Вы хотите настроить блокировку приложения сейчас?</translation>
     </message>
     <message>
         <location filename="../settingswidget.cpp" line="618"/>
@@ -927,10 +958,41 @@ Please setup the password in the Settings first.</source>
         <translation>Разрешения функций</translation>
     </message>
     <message>
+        <location filename="../settingswidget.cpp" line="646"/>
+        <source>Automatic theme switcher setup</source>
+        <translation>Настройка автоматической смены темы.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="680"/>
+        <source>App Lock Setup</source>
+        <translation>Настройка блокировки приложения.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="681"/>
+        <source>Please setup the App lock password first.</source>
+        <translation>Пожалуйста, сначала установите пароль для блокировки приложения.</translation>
+    </message>
+    <message>
         <location filename="../settingswidget.cpp" line="790"/>
         <location filename="../settingswidget.cpp" line="801"/>
         <source>Select download directory</source>
         <translation>Выберите папку для загрузки</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="841"/>
+        <source>You are about to change your current app lock password!
+
+This will LogOut your current session.
+You may also require a complete restart of Application!</source>
+        <translation>Вы собираетесь изменить текущий пароль блокировки приложения!
+
+Это приведет к выходу из текущей сессии.
+Вам также может потребоваться полный перезапуск приложения!</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="847"/>
+        <source>Do you want to proceed?</source>
+        <translation>Вы хотите продолжить?</translation>
     </message>
 </context>
 <context>

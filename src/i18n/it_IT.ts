@@ -918,6 +918,7 @@ Imposta la password nelle Impostazioni.</translation>
     <message>
         <location filename="../settingswidget.ui" line="791"/>
         <location filename="../settingswidget.ui" line="825"/>
+        <location filename="../settingswidget.cpp" line="851"/>
         <source>Change password</source>
         <translation>Cambia Password</translation>
     </message>
@@ -1004,9 +1005,39 @@ Imposta la password nelle Impostazioni.</translation>
         <translation>Dati persistenti</translation>
     </message>
     <message>
+        <location filename="../settingswidget.cpp" line="362"/>
+        <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="367"/>
+        <source>Delete Cookies and Quit Application?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="469"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="470"/>
+        <source>Cannot set an empty UserAgent String.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingswidget.cpp" line="515"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>Il cambio automatico del tema è stato disabilitato.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="554"/>
+        <source>App lock is not configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="558"/>
+        <source>Do you want to setup App lock now?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingswidget.cpp" line="618"/>
@@ -1014,10 +1045,38 @@ Imposta la password nelle Impostazioni.</translation>
         <translation>Permessi funzionalità</translation>
     </message>
     <message>
+        <location filename="../settingswidget.cpp" line="646"/>
+        <source>Automatic theme switcher setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="680"/>
+        <source>App Lock Setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="681"/>
+        <source>Please setup the App lock password first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingswidget.cpp" line="790"/>
         <location filename="../settingswidget.cpp" line="801"/>
         <source>Select download directory</source>
         <translation>Seleziona cartella scaricati</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="841"/>
+        <source>You are about to change your current app lock password!
+
+This will LogOut your current session.
+You may also require a complete restart of Application!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.cpp" line="847"/>
+        <source>Do you want to proceed?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
