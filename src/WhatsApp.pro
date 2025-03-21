@@ -201,10 +201,10 @@ license.path = $$PREFIX/share/licenses/whatsie/
 license.files = ../LICENSE
 
 appstream.path = $$PREFIX/share/metainfo/
-appstream.files = ../dist/linux/com.ktechpit.whatsie.appdata.xml
+appstream.files = ../dist/linux/whatsie.appdata.xml
 
 desktop.path  = $$DATADIR/applications/
-desktop.files = ../dist/linux/com.ktechpit.whatsie.desktop
+desktop.files = ../dist/linux/whatsie.desktop
 
 unix:INSTALLS += target icon16 icon32 icon64 icon128 icon256
 unix:INSTALLS += iconscalable iconsymbolic license appstream desktop
