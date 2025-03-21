@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
   instance.setQuitOnLastWindowClosed(false);
   instance.setWindowIcon(QIcon(":/icons/app/icon-64.png"));
   QApplication::setApplicationName("WhatSie");
-  QApplication::setDesktopFileName("com.ktechpit.whatsie");
+  QApplication::setDesktopFileName("whatsie");
   QApplication::setOrganizationDomain("com.ktechpit");
   QApplication::setOrganizationName("whatsie");
   QApplication::setApplicationVersion(VERSIONSTR);

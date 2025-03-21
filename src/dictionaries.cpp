@@ -25,8 +25,20 @@ QString Dictionaries::GetDictionaryPath() {
 
   QString dict_dir = "qtwebengine_dictionaries";
 
-  // inside appdata dir /usr/share/org/appname
-  QString appdata_path = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation).filter("/usr/share").first();
+  // inside appdata dir /usr/share/appname
+  QStringList dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+
+  QString appdata_path;
+  for (const QString &path : dataLocations) {
+      if (path == "/usr/share") {
+          appdata_path = path;
+          break;
+      }
+  }
+
+  if (appdata_path.isEmpty()) {
+      appdata_path = dataLocations.filter("/usr/share").first();
+  }
   dict_path =
       QString("%1/%2/%3")
           .arg(appdata_path,
