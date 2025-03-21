@@ -30,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
   createTrayIcon();
   createWebEngine();
   initSettingWidget();
-  initRateWidget();
   QApplication::processEvents();
   tryLock();
   updateWindowTheme();
@@ -79,29 +78,10 @@ void MainWindow::initAutoLock() {
   }
 }
 
-void MainWindow::initRateWidget() {
-  RateApp *rateApp = new RateApp(this, "snap://whatsie", 5, 5, 1000 * 30);
-  rateApp->setWindowTitle(QApplication::applicationName() + " | " +
-                          tr("Rate Application"));
-  rateApp->setVisible(false);
-  rateApp->setWindowFlags(Qt::Dialog);
-  rateApp->setAttribute(Qt::WA_DeleteOnClose, true);
-  QPoint centerPos = this->geometry().center() - rateApp->geometry().center();
-  connect(rateApp, &RateApp::showRateDialog, rateApp, [=]() {
-    if (this->windowState() != Qt::WindowMinimized && this->isVisible() &&
-        isActiveWindow()) {
-      rateApp->move(centerPos);
-      rateApp->show();
-    } else {
-      rateApp->delayShowEvent();
-    }
-  });
-}
-
 void MainWindow::runMinimized() {
   this->m_minimizeAction->trigger();
   showNotification("Whatsie",
-                   "Whatsie started minimized in system tray. Click to Open.");
+                   tr("Whatsie started minimized in system tray. Click to Open."));
 }
 
 MainWindow::~MainWindow() { m_webEngine->deleteLater(); }
@@ -445,7 +425,7 @@ void MainWindow::showSettings(bool isAskedByCLI) {
   if (m_webEngine == nullptr) {
     QMessageBox::critical(
         this, QApplication::applicationName() + "| Error",
-        "Unable to initialize settings module.\nWebengine is not initialized.");
+        tr("Unable to initialize settings module.\nWebengine is not initialized."));
     return;
   }
   if (!m_settingsWidget->isVisible()) {
@@ -468,8 +448,8 @@ void MainWindow::updateSettingsUserAgentWidget() {
 
 void MainWindow::askToReloadPage() {
   QMessageBox msgBox;
-  msgBox.setWindowTitle(QApplication::applicationName() + " | Action required");
-  msgBox.setInformativeText("Page needs to be reloaded to continue.");
+  msgBox.setWindowTitle(QApplication::applicationName() + " | " + tr("Action required"));
+  msgBox.setInformativeText(tr("Page needs to be reloaded to continue."));
   msgBox.setStandardButtons(QMessageBox::Ok);
   msgBox.exec();
   this->doAppReload();
@@ -502,7 +482,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
             .value("firstrun_tray", true)
             .toBool()) {
       showNotification(QApplication::applicationName(),
-                       "Minimized to system tray.");
+                       tr("Minimized to system tray."));
       SettingsManager::instance().settings().setValue("firstrun_tray", false);
     }
     return;
@@ -578,7 +558,7 @@ void MainWindow::notificationClicked() {
 
 void MainWindow::createActions() {
 
-  m_openUrlAction = new QAction("New Chat", this);
+  m_openUrlAction = new QAction(tr("New Chat"), this);
   m_openUrlAction->setShortcut(QKeySequence(Qt::Modifier::CTRL + Qt::Key_N));
   connect(m_openUrlAction, &QAction::triggered, this, &MainWindow::newChat);
   addAction(m_openUrlAction);
@@ -709,7 +689,7 @@ void MainWindow::initLock() {
                                        .toString()
                                        .toUtf8()));
       } else {
-        m_settingsWidget->setCurrentPasswordText("Require setup");
+        m_settingsWidget->setCurrentPasswordText(tr("Require setup"));
       }
       m_settingsWidget->appLockSetChecked(SettingsManager::instance()
                                               .settings()
@@ -964,10 +944,10 @@ void MainWindow::setNotificationPresenter(QWebEngineProfile *profile) {
                           this,
                           [notificationPtr]() {
                             if (notificationPtr) {
-                              qWarning() << "notificationPtr clciked";
+                              qWarning() << "notificationPtr clicked";
                               notificationPtr->click();
                             }
-                            qWarning() << "notificationPtr clciked Ok";
+                            qWarning() << "notificationPtr clicked Ok";
                           },
                           Qt::QueuedConnection);
                     });
@@ -1133,12 +1113,12 @@ void MainWindow::loadingQuirk(const QString &test) {
 // manager
 void MainWindow::handleDownloadRequested(QWebEngineDownloadItem *download) {
   QFileDialog dialog(this);
-  bool usenativeFileDialog = SettingsManager::instance()
+  bool useNativeFileDialog = SettingsManager::instance()
                                  .settings()
                                  .value("useNativeFileDialog", false)
                                  .toBool();
 
-  if (usenativeFileDialog == false) {
+  if (useNativeFileDialog == false) {
     dialog.setOption(QFileDialog::DontUseNativeDialog, true);
   }
 
@@ -1269,7 +1249,7 @@ void MainWindow::tryLock() {
 void MainWindow::alreadyRunning(bool notify) {
   if (notify) {
     QString appname = QApplication::applicationName();
-    this->showNotification(appname, "Restored an already running instance.");
+    this->showNotification(appname, tr("Restored an already running instance."));
   }
   this->setWindowState((this->windowState() & ~Qt::WindowMinimized) |
                        Qt::WindowActive);

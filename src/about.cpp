@@ -16,11 +16,7 @@ About::About(QWidget *parent) : QWidget(parent), ui(new Ui::About) {
   appAuthorName = "Keshav Bhatt";
   appAuthorEmail = "keshavnrj@gmail.com";
   appAuthorLink = "http://ktechpit.com";
-  donateLink = "https://paypal.me/keshavnrj/5";
-  moreAppsLink = "https://snapcraft.io/publisher/keshavnrj";
-
   appSourceCodeLink = "https://github.com/keshavbhatt/whatsie";
-  appRateLink = "snap://whatsie";
 
   ui->appNameDesc->setText(
       QString("<p style=' margin-top:12px; margin-bottom:12px; margin-left:0px;"
@@ -52,13 +48,6 @@ About::About(QWidget *parent) : QWidget(parent), ui(new Ui::About) {
     ui->source_code->hide();
   }
 
-  connect(ui->donate, &QPushButton::clicked,
-          [=]() { QDesktopServices::openUrl(QUrl(donateLink)); });
-
-  connect(ui->rate, &QPushButton::clicked,
-          [=]() { QDesktopServices::openUrl(QUrl(appRateLink)); });
-  connect(ui->more_apps, &QPushButton::clicked,
-          [=]() { QDesktopServices::openUrl(QUrl(moreAppsLink)); });
   connect(ui->source_code, &QPushButton::clicked,
           [=]() { QDesktopServices::openUrl(QUrl(appSourceCodeLink)); });
 

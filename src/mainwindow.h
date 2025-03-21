@@ -28,7 +28,6 @@
 #include "downloadmanagerwidget.h"
 #include "lock.h"
 #include "notificationpopup.h"
-#include "rateapp.h"
 #include "requestinterceptor.h"
 #include "settingswidget.h"
 #include "theme.h"

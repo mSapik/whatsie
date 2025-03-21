@@ -91,7 +91,6 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         permissiondialog.cpp \
-        rateapp.cpp \
         settingswidget.cpp \
         sunclock.cpp \
         theme.cpp \
@@ -101,7 +100,8 @@ SOURCES += \
         widgets/elidedlabel/elidedlabel.cpp \
         widgets/scrolltext/scrolltext.cpp
 RESOURCES += \
-        icons.qrc
+        icons.qrc \
+        translations.qrc
 
 HEADERS += \
     about.h \
@@ -116,7 +116,6 @@ HEADERS += \
     mainwindow.h \
     notificationpopup.h \
     permissiondialog.h \
-    rateapp.h \
     requestinterceptor.h \
     settingsmanager.h \
     settingswidget.h \
@@ -136,12 +135,21 @@ FORMS += \
     lock.ui \
     passworddialog.ui \
     permissiondialog.ui \
-    rateapp.ui \
     settingswidget.ui
 
 TRANSLATIONS += \
-    i18n/it_IT.ts
+    i18n/it_IT.ts \
+    i18n/ru_RU.ts
 
+# Автоматически генерировать .qm файлы при сборке
+QMAKE_EXTRA_TARGETS += translations
+translations.target = translations
+translations.commands = lrelease $$PWD/i18n/*.ts
+QMAKE_POST_LINK += $$translations.commands
+
+DISTFILES += \
+    i18n/it_IT.qm \
+    i18n/ru_RU.qm
 
 # Default rules for deployment
 isEmpty(PREFIX){

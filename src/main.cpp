@@ -1,5 +1,8 @@
 #include <QApplication>
 #include <QDebug>
+#include <QTranslator>
+#include <QLocale>
+#include <QCommandLineParser>
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
 #include <QtWebEngine>
@@ -142,6 +145,26 @@ int main(int argc, char *argv[]) {
       QWebEngineSettings::FullScreenSupportEnabled, true);
   QWebEngineSettings::defaultSettings()->setAttribute(
       QWebEngineSettings::JavascriptCanAccessClipboard, true);
+
+  QTranslator translatorRU;
+  QTranslator translatorIT;
+
+  QLocale systemLocale = QLocale::system();
+  if (systemLocale.language() == QLocale::Russian) {
+      if (translatorRU.load(":/translations/i18n/ru_RU.qm")) {
+          instance.installTranslator(&translatorRU);
+          qDebug() << "Russian translation loaded successfully.";
+      } else {
+          qWarning("Failed to load Russian translation file!");
+      }
+  } else if (systemLocale.language() == QLocale::Italian) {
+      if (translatorIT.load(":/translations/i18n/it_IT.qm")) {
+          instance.installTranslator(&translatorIT);
+          qDebug() << "Italian translation loaded successfully.";
+      } else {
+          qWarning("Failed to load Italian translation file!");
+      }
+  }
 
   MainWindow whatsie;
 

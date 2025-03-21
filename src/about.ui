@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>522</width>
-    <height>487</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -161,43 +161,11 @@ p, li { white-space: pre-wrap; }
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <property name="topMargin">
-            <number>0</number>
+          <widget class="QPushButton" name="source_code">
+           <property name="text">
+            <string>Source Code</string>
            </property>
-           <item>
-            <widget class="QPushButton" name="donate">
-             <property name="text">
-              <string>Donate PayPal</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="rate">
-             <property name="text">
-              <string>Rate in Store</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QPushButton" name="more_apps">
-             <property name="text">
-              <string>More Applications</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="source_code">
-             <property name="text">
-              <string>Source Code</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="debugInfoButton">
@@ -206,20 +174,20 @@ p, li { white-space: pre-wrap; }
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QTextBrowser" name="debugInfoText">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>130</height>
+            </size>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+           </property>
+          </widget>
+         </item>
         </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTextBrowser" name="debugInfoText">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>150</height>
-         </size>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-        </property>
        </widget>
       </item>
      </layout>
