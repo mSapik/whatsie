@@ -11,29 +11,29 @@ About::About(QWidget *parent) : QWidget(parent), ui(new Ui::About) {
 
   // init
   appName = QApplication::applicationName();
-  appDescription = "WhatsApp Web client for Linux Desktop";
+  appDescription = tr("WhatsApp Web client for Linux Desktop");
   isOpenSource = true;
-  appAuthorName = "Keshav Bhatt";
-  appAuthorEmail = "keshavnrj@gmail.com";
-  appAuthorLink = "http://ktechpit.com";
-  appSourceCodeLink = "https://github.com/keshavbhatt/whatsie";
+  appAuthorName = tr("Keshav Bhatt");
+  appAuthorEmail = tr("keshavnrj@gmail.com");
+  appAuthorLink = tr("http://ktechpit.com");
+  appSourceCodeLink = tr("https://github.com/keshavbhatt/whatsie");
 
   ui->appNameDesc->setText(
-      QString("<p style=' margin-top:12px; margin-bottom:12px; margin-left:0px;"
+      QString(tr("<p style=' margin-top:12px; margin-bottom:12px; margin-left:0px;"
               " margin-right:0px; -qt-block-indent:0; text-indent:0px;'>"
               "<span style=' font-size:18pt;'>%1</span></p>"
               "<p style=' margin-top:12px; margin-bottom:12px; margin-left:0px;"
               " margin-right:0px; -qt-block-indent:0; text-indent:0px;'>"
-              "%2</p>")
+              "%2</p>"))
           .arg(appName, appDescription));
 
   ui->desc2->setText(
-      QString("<p><span style=' font-weight:600;'>Designed &amp; Developed "
+      QString(tr("<p><span style=' font-weight:600;'>Designed &amp; Developed "
               "by:</span>"
               " %1 </p><p><span style=' font-weight:600;'>"
               "Email: </span>%2</p>"
               "<p><span style=' font-weight:600;'>Website:</span>"
-              " %3</p>")
+              " %3</p>"))
           .arg(appAuthorName, appAuthorEmail, appAuthorLink));
 
   ui->version->setText("Version: " + QApplication::applicationVersion());

@@ -26,16 +26,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../about.ui" line="135"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../about.ui" line="142"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Designed &amp;amp; Developed by:&lt;/span&gt; Keshav Bhatt &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Email: &lt;/span&gt;keshavnrj@gmail.com&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Website:&lt;/span&gt; http://ktechpit.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>Разработано: Keshav Bhatt
-https://github.com/keshavbhatt/whatsie
-
-Доработано: Максим Сапожник
-https://github.com/mSapik/whatsie</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Разработано:&lt;/span&gt; Keshav Bhatt &lt;br&gt;https://github.com/keshavbhatt/whatsie&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Доработано:&lt;/span&gt; Максим Сапожник &lt;br&gt;https://github.com/mSapik/whatsie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="166"/>
@@ -46,6 +42,41 @@ https://github.com/mSapik/whatsie</translation>
         <location filename="../about.ui" line="173"/>
         <source>Debug Info</source>
         <translation>Отладочная информация</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="14"/>
+        <source>WhatsApp Web client for Linux Desktop</source>
+        <translation>WhatsApp Web клиент для Linux</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="16"/>
+        <source>Keshav Bhatt</source>
+        <translation>Keshav Bhatt</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="17"/>
+        <source>keshavnrj@gmail.com</source>
+        <translation>keshavnrj@gmail.com</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="18"/>
+        <source>http://ktechpit.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="19"/>
+        <source>https://github.com/keshavbhatt/whatsie</source>
+        <translation>https://github.com/msapik/whatsie</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="22"/>
+        <source>&lt;p style=&apos; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&apos;&gt;&lt;span style=&apos; font-size:18pt;&apos;&gt;%1&lt;/span&gt;&lt;/p&gt;&lt;p style=&apos; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&apos;&gt;%2&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="31"/>
+        <source>&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Designed &amp;amp; Developed by:&lt;/span&gt; %1 &lt;/p&gt;&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Email: &lt;/span&gt;%2&lt;/p&gt;&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Website:&lt;/span&gt; %3&lt;/p&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Разработано:&lt;/span&gt; Keshav Bhatt &lt;br&gt;https://github.com/keshavbhatt/whatsie&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Доработано:&lt;/span&gt; Максим Сапожник &lt;br&gt;https://github.com/mSapik/whatsie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -277,15 +308,22 @@ Do you wish to override the security check and continue ?   </source>
         <translation>Whatsie запущен в системном трее. Нажмите, чтобы открыть.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="395"/>
         <source>App lock is not configured,
 Please setup the password in the Settings first.
 
 Open Settings now?</source>
-        <translation>Блокировка приложения не настроена.
+        <translation type="vanished">Блокировка приложения не настроена.
 Сначала установите пароль в настройках.
 
 Открыть настройки сейчас?</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="395"/>
+        <source>App lock is not configured, 
+Please setup the password in the Settings first.
+
+Open Settings now?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="413"/>
@@ -298,6 +336,16 @@ Open Settings now?</source>
 Webengine is not initialized.</source>
         <translation>Не удалось инициализировать модуль настроек.
 Webengine не инициализирован.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="451"/>
+        <source>Action required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="452"/>
+        <source>Page needs to be reloaded to continue.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="485"/>
@@ -505,9 +553,14 @@ Webengine не инициализирован.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="203"/>
+        <source>App lock is not configured, 
+Please setup the password in the Settings first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>App lock is not configured,
 Please setup the password in the Settings first.</source>
-        <translation>Блокировка приложения не настроена.
+        <translation type="vanished">Блокировка приложения не настроена.
 Сначала установите пароль в настройках.</translation>
     </message>
     <message>

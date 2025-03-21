@@ -63,6 +63,41 @@ p, li { white-space: pre-wrap; }
         <source>Debug Info</source>
         <translation>Dettagli Debug</translation>
     </message>
+    <message>
+        <location filename="../about.cpp" line="14"/>
+        <source>WhatsApp Web client for Linux Desktop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="16"/>
+        <source>Keshav Bhatt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="17"/>
+        <source>keshavnrj@gmail.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="18"/>
+        <source>http://ktechpit.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="19"/>
+        <source>https://github.com/keshavbhatt/whatsie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="22"/>
+        <source>&lt;p style=&apos; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&apos;&gt;&lt;span style=&apos; font-size:18pt;&apos;&gt;%1&lt;/span&gt;&lt;/p&gt;&lt;p style=&apos; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&apos;&gt;%2&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="31"/>
+        <source>&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Designed &amp;amp; Developed by:&lt;/span&gt; %1 &lt;/p&gt;&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Email: &lt;/span&gt;%2&lt;/p&gt;&lt;p&gt;&lt;span style=&apos; font-weight:600;&apos;&gt;Website:&lt;/span&gt; %3&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AutomaticTheme</name>
@@ -325,6 +360,16 @@ Aprire le Impostazioni ora?</translation>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Unable to initialize settings module.
 Webengine is not initialized.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="451"/>
+        <source>Action required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="452"/>
+        <source>Page needs to be reloaded to continue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

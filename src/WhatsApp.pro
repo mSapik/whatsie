@@ -48,8 +48,6 @@ LIBS += -L/usr/X11/lib -lX11
 include(singleapplication/singleapplication.pri)
 DEFINES += QAPPLICATION_CLASS=QApplication
 
-include(widgets/MoreApps/MoreApps.pri)
-
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Refer to the documentation for the
@@ -73,7 +71,7 @@ BUILD_TIMESTAMP="\"\\\"$${_DATE_}\\\"\""
 DEFINES += GIT_HASH=$$GIT_HASH GIT_BRANCH=$$GIT_BRANCH BUILD_TIMESTAMP=$$BUILD_TIMESTAMP
 
 # Set program version
-VERSION = 4.16.3
+VERSION = 4.16.4
 DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
 
 # You can also make your code fail to compile if you use deprecated APIs.
@@ -99,6 +97,7 @@ SOURCES += \
         webview.cpp \
         widgets/elidedlabel/elidedlabel.cpp \
         widgets/scrolltext/scrolltext.cpp
+
 RESOURCES += \
         icons.qrc \
         translations.qrc
