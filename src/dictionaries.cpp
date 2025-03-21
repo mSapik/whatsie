@@ -28,8 +28,8 @@ QString Dictionaries::GetDictionaryPath() {
   // inside appdata dir /usr/share/org/appname
   QString appdata_path = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation).filter("/usr/share").first();
   dict_path =
-      QString("%1/%2/%3/%4")
-          .arg(appdata_path,QApplication::organizationName(),
+      QString("%1/%2/%3")
+          .arg(appdata_path,
                QApplication::applicationName(), dict_dir);
   qDebug()<< dict_path;
   if (QDir(dict_path).exists()) {
