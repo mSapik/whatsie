@@ -5,7 +5,7 @@ GenericName=Qt WhatsApp Web Client
 GenericName[ru]=Веб-клиент для WhatsApp
 Comment[it]=Un Client per WhatsApp Web basato su QT
 Comment=A WhatsApp Web Client using the QT framework
-Comment[ru]Веб-клиент WhatsApp, использующий фреймворк QT.
+Comment[ru]=Веб-клиент WhatsApp, использующий фреймворк QT.
 Icon=com.ktechpit.whatsie
 Exec=whatsie %u
 Terminal=false
