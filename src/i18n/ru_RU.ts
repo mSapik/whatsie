@@ -308,22 +308,15 @@ Do you wish to override the security check and continue ?   </source>
         <translation>Whatsie запущен в системном трее. Нажмите, чтобы открыть.</translation>
     </message>
     <message>
-        <source>App lock is not configured,
-Please setup the password in the Settings first.
-
-Open Settings now?</source>
-        <translation type="vanished">Блокировка приложения не настроена.
-Сначала установите пароль в настройках.
-
-Открыть настройки сейчас?</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.
 
 Open Settings now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Блокировка приложения не настроена.
+Сначала установите пароль в настройках.
+
+Открыть настройки сейчас?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="413"/>
@@ -340,12 +333,12 @@ Webengine не инициализирован.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="451"/>
         <source>Action required</source>
-        <translation type="unfinished"></translation>
+        <translation>Требуется действие.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
         <source>Page needs to be reloaded to continue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Для продолжения необходимо перезагрузить страницу.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="485"/>
@@ -555,12 +548,7 @@ Webengine не инициализирован.</translation>
         <location filename="../main.cpp" line="203"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>App lock is not configured,
-Please setup the password in the Settings first.</source>
-        <translation type="vanished">Блокировка приложения не настроена.
+        <translation>Блокировка приложения не настроена.
 Сначала установите пароль в настройках.</translation>
     </message>
     <message>
