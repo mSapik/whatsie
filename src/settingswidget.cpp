@@ -53,11 +53,18 @@ SettingsWidget::SettingsWidget(QWidget *parent, int screenNumber,
                                             .settings()
                                             .value("autoPlayMedia", false)
                                             .toBool());
-  ui->themeComboBox->setCurrentText(
-      Utils::toCamelCase(SettingsManager::instance()
-                             .settings()
-                             .value("windowTheme", "light")
-                             .toString()));
+  ui->themeComboBox->clear();
+  ui->themeComboBox->addItem(tr("Light"), "light");
+  ui->themeComboBox->addItem(tr("Dark"), "dark");
+
+  QString theme = SettingsManager::instance()
+                  .settings()
+                  .value("windowTheme", "light")
+                  .toString();
+  int index = ui->themeComboBox->findData(theme);
+  if (index != -1) {
+      ui->themeComboBox->setCurrentIndex(index);
+  }
 
   ui->userAgentLineEdit->setText(SettingsManager::instance()
                                      .settings()
@@ -237,11 +244,11 @@ void SettingsWidget::themeSwitchTimerTimeout() {
     int currentSeconds = QTime(0, 0).secsTo(currentTime.time());
 
     if (inRange(sunsetSeconds, sunriseSeconds, currentSeconds)) {
-      qDebug() << "is night: ";
-      ui->themeComboBox->setCurrentText("Dark");
+        int index = ui->themeComboBox->findData("dark");
+        if (index != -1) ui->themeComboBox->setCurrentIndex(index);
     } else {
-      qDebug() << "is morn: ";
-      ui->themeComboBox->setCurrentText("Light");
+        int index = ui->themeComboBox->findData("light");
+        if (index != -1) ui->themeComboBox->setCurrentIndex(index);
     }
   }
 }
@@ -307,11 +314,14 @@ void SettingsWidget::loadDictionaries(QStringList dictionaries) {
 }
 
 void SettingsWidget::refresh() {
-  ui->themeComboBox->setCurrentText(
-      Utils::toCamelCase(SettingsManager::instance()
-                             .settings()
-                             .value("windowTheme", "light")
-                             .toString()));
+  QString theme = SettingsManager::instance()
+                  .settings()
+                  .value("windowTheme", "light")
+                  .toString();
+  int index = ui->themeComboBox->findData(theme);
+  if (index != -1) {
+      ui->themeComboBox->setCurrentIndex(index);
+  }
 
   ui->cookieSize->setText(Utils::refreshCacheSize(persistentStoragePath()));
 
@@ -392,16 +402,15 @@ void SettingsWidget::on_notificationCheckBox_toggled(bool checked) {
 
 void SettingsWidget::on_themeComboBox_currentTextChanged(const QString &arg1) {
   applyThemeQuirks();
-  SettingsManager::instance().settings().setValue("windowTheme",
-                                                  QString(arg1).toLower());
+  QString themeData = ui->themeComboBox->currentData().toString();
+  SettingsManager::instance().settings().setValue("windowTheme", themeData);
   emit updateWindowTheme();
   emit updatePageTheme();
 }
 
 void SettingsWidget::applyThemeQuirks() {
   // little quirks
-  if (QString::compare(ui->themeComboBox->currentText(), "dark",
-                       Qt::CaseInsensitive) == 0) {
+  if (ui->themeComboBox->currentData().toString() == "dark") {
     ui->bottomLine->setStyleSheet("background-color: rgb(0, 117, 96);");
     ui->label_7->setStyleSheet(
         "color:#c2c5d1;padding: 0px 8px 0px 8px;background:transparent;");
@@ -516,10 +525,13 @@ void SettingsWidget::toggleTheme() {
         "Automatic theme switching was disabled due to manual theme toggle."));
     ui->automaticThemeCheckBox->setChecked(false);
   }
-  if (ui->themeComboBox->currentIndex() == 0) {
-    ui->themeComboBox->setCurrentIndex(1);
+  QString currentTheme = ui->themeComboBox->currentData().toString();
+  if (currentTheme == "light") {
+      int index = ui->themeComboBox->findData("dark");
+      if (index != -1) ui->themeComboBox->setCurrentIndex(index);
   } else {
-    ui->themeComboBox->setCurrentIndex(0);
+      int index = ui->themeComboBox->findData("light");
+      if (index != -1) ui->themeComboBox->setCurrentIndex(index);
   }
 }
 

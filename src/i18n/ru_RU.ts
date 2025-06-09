@@ -658,12 +658,12 @@ Please setup the password in the Settings first.</source>
     <message>
         <location filename="../settingswidget.ui" line="177"/>
         <source>Dark</source>
-        <translation></translation>
+        <translation>Темная</translation>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="186"/>
         <source>Light</source>
-        <translation></translation>
+        <translation>Светлая</translation>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="228"/>
