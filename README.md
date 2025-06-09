@@ -1,116 +1,101 @@
 # WhatSie
 
-Feature rich WhatsApp web client based on Qt WebEngine for Linux Desktop
+Функциональный клиент WhatsApp Web на базе Qt WebEngine для Linux Desktop
+Форк https://github.com/keshavbhatt/whatsie
+Убрана реклама, добавлена поддержка перевода в зависимости от языка системы, перевод на русский язык
 
-## Whatsie Key features
+## Основные функции Whatsie
 
-- Light and Dark Themes with automatic switching
-- Customized Notifications & Native Notifications
-- Keyboard Shortcuts
-- BuiltIn download manager
-- Mute Audio, Disable Notifications
-- App Lock feature
-- Hardware access permission manager
-- Built in Spell Checker (with support for 31 Major languages)
-- Other settings that let you control every aspect of WebApp like:
-	+ Do not disturb mode
-	+ Full view mode, lets you expand the main view to the full width of the window
-	+ Ability to switch between Native & Custom notification
-	+ Configurable notification popup timeout
-	+ Mute all audio from Whatapp
-	+ Disabling auto playback of media
-	+ Minimize to tray on application start
-	+ Toggle to enable single click hide to the system tray
-	+ Switching download location
-	+ Enable disable app lock on application start
-	+ Auto-locking after a certain interval of time
-	+ App lock password management
-	+ Widget styling
-	+ Configurable auto Theme switching based on day night time
-	+ Configurable close button action
-	+ Global App shortcuts
-	+ Permission manager let you toggle camera mic and other hardware level permissions
-	+ Configurable page zoom factor, switching based on window state maximized on normal 
-	+ Configurable App User Agent
-	+ Application Storage management, lets you clean residual cache and persistent data
+* Светлая и тёмная темы с автоматическим переключением
+* Настраиваемые уведомления и нативные уведомления
+* Горячие клавиши
+* Встроенный менеджер загрузок
+* Отключение звука, уведомлений
+* Функция блокировки приложения
+* Менеджер разрешений на доступ к оборудованию
+* Встроенная проверка орфографии (с поддержкой 31 основного языка)
+* Другие настройки, позволяющие управлять всеми аспектами веб-приложения, включая:
 
-## Command line options:
-Comes with general CLI support, with a bunch of options that let you interact with already running instances of Whatsie.
+  * Режим "не беспокоить"
+  * Режим полного просмотра, расширяющий главный экран на всю ширину окна
+  * Возможность переключения между нативными и пользовательскими уведомлениями
+  * Настраиваемое время отображения всплывающих уведомлений
+  * Полное отключение звуков WhatsApp
+  * Отключение автопроигрывания медиа
+  * Сворачивание в трей при запуске приложения
+  * Однонажатием скрыть в системный трей
+  * Переключение директории загрузки
+  * Включение/отключение блокировки при запуске
+  * Автоблокировка через заданный интервал времени
+  * Управление паролем блокировки
+  * Настройка оформления виджетов
+  * Автоматическое переключение темы в зависимости от времени суток
+  * Настраиваемое поведение кнопки закрытия
+  * Глобальные горячие клавиши
+  * Менеджер разрешений: переключение камеры, микрофона и других разрешений на уровне оборудования
+  * Настройка коэффициента масштабирования страницы, в зависимости от состояния окна (максимизировано или нет)
+  * Настраиваемый User Agent приложения
+  * Управление хранилищем приложения: очистка остаточного кэша и постоянных данных
 
-Run: `whatsie -h` to see all supported options.
+## Опции командной строки:
+
+Поддержка командной строки, позволяющая взаимодействовать с уже запущенными экземплярами WhatSie.
+
+Запустите: `whatsie -h` для просмотра всех поддерживаемых опций.
 
 ```
-Usage: whatsie [options]
-Feature rich WhatsApp web client based on Qt WebEngine
+Использование: whatsie [опции]
+Функциональный клиент WhatsApp Web на базе Qt WebEngine
 
-Options:
-  -h, --help           Displays help on commandline options
-  -v, --version        Displays version information.
-  -b, --build-info     Shows detailed current build infomation
-  -w, --show-window    Show main window of running instance of WhatSie
-  -s, --open-settings  Opens Settings dialog in a running instance of WhatSie
-  -l, --lock-app       Locks a running instance of WhatSie
-  -i, --open-about     Opens About dialog in a running instance of WhatSie
-  -t, --toggle-theme   Toggle between dark & light theme in a running instance
-                       of WhatSie
-  -r, --reload-app     Reload the app in a running instance of WhatSie
-  -n, --new-chat       Open new chat prompt in a running instance of WhatSie
+Опции:
+  -h, --help           Показать справку по параметрам командной строки
+  -v, --version        Показать информацию о версии
+  -b, --build-info     Показать подробную информацию о текущей сборке
+  -w, --show-window    Показать главное окно запущенного экземпляра WhatSie
+  -s, --open-settings  Открыть окно настроек в запущенном экземпляре WhatSie
+  -l, --lock-app       Заблокировать запущенный экземпляр WhatSie
+  -i, --open-about     Открыть окно "О программе" в запущенном экземпляре WhatSie
+  -t, --toggle-theme   Переключить тему (светлая/тёмная) в запущенном экземпляре WhatSie
+  -r, --reload-app     Перезагрузить приложение в запущенном экземпляре WhatSie
+  -n, --new-chat       Открыть окно нового чата в запущенном экземпляре WhatSie
 ```
 
-## Build instructions (Linux)
-The source code can be built using the regular Qt application development procedure. Whatsie Project makes use of Qt's QMake build system, which simplifies the build process. To build Whatsie locally on your system, follow the steps below.
+## Инструкция по сборке (Linux)
 
-### Build requirements
- - git (to clone repo)
- - libx11-dev libx11-xcb-dev (required for x11 XKB module support at build time)
- - Qt => 5.9 (5.15 recommended) with the following modules installed with development headers (lib*-dev packages on Ubuntu)
-	+ webengine
-	+ webenginewidgets
-	+ positioning
-	
-### Build steps
- 
- 1. **Clone** source code
+Исходный код может быть собран стандартным способом для Qt-приложений. Проект Whatsie использует систему сборки QMake от Qt, которая упрощает процесс.
 
- 	`git clone https://github.com/keshavbhatt/whatsie.git`
+### Требования к сборке
 
- 2. Enter into source directory  
-	
-	`cd whatsie/src`  
-	
- 3. Run **qmake**
-	
-	`qmake`
-	
- 4. Run **make** (with optional **-j** option that specify jobs or commands to run simultaneously while building)
- 
-	`make -j4`  
-	
- 5. **Run built whatsie** executable (if build finished with no errors)
- 
-	`./whatsie`
-	
- 5. Run **make install** if you want to install (if build finished with no errors)
- 
-	`sudo make install`
+* `git` (для клонирования репозитория)
+* `libx11-dev`, `libx11-xcb-dev` (необходимы для поддержки XKB модуля X11 при сборке)
+* Qt версии ≥ 5.9 (рекомендуется 5.15) с установленными модулями и заголовочными файлами (пакеты `lib*-dev` в Ubuntu):
 
+  * `webengine`
+  * `webenginewidgets`
+  * `positioning`
 
+### Шаги сборки
 
-## Install Whatsie on Linux Desktop
+1. **Клонируйте** исходный код:
 
-### On any snapd supported Linux distributions
+   `git clone https://github.com/msapik/whatsie.git`
 
- `snap install whatsie`
+2. Перейдите в каталог с исходниками
 
-### On any Arch based Linux distribution
-Using Arch User Repository (AUR), [AUR package for Whatsie](https://aur.archlinux.org/packages/whatsie-git) is maintained by [M0Rf30](https://github.com/M0Rf30)
+   `cd whatsie/src`
 
- `yay -S whatsie-git`
+3. Запустите **qmake**
 
-## Screenshots (could be old)
+   `qmake`
 
-![WhatSie for Linux Desktop Light Theme](https://github.com/keshavbhatt/whatsie/blob/main/screenshots/1.jpg?raw=true)
-![WhatSie for Linux Desktop Dark Theme](https://github.com/keshavbhatt/whatsie/blob/main/screenshots/2.jpg?raw=true)
-![WhatSie for Linux Desktop Setting module](https://github.com/keshavbhatt/whatsie/blob/main/screenshots/4.jpg?raw=true)
-![WhatSie for Linux Desktop App Lock screen](https://github.com/keshavbhatt/whatsie/blob/main/screenshots/3.jpg?raw=true)
-![WhatSie for Linux Desktop Shortcuts & Permissions](https://github.com/keshavbhatt/whatsie/blob/main/screenshots/5.jpg?raw=true)
+4. Выполните **make** (опционально с флагом **-j**, задающим количество параллельных процессов)
+
+   `make -j4`
+
+5. **Запустите собранный исполняемый файл whatsie** (если сборка завершилась без ошибок)
+
+   `./whatsie`
+
+6. Выполните **make install**, если хотите установить приложение (если сборка завершилась без ошибок)
+
+   `sudo make install`
