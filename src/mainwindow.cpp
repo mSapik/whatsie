@@ -34,6 +34,14 @@ MainWindow::MainWindow(QWidget *parent)
   tryLock();
   updateWindowTheme();
   initAutoLock();
+
+  // Обработка системного завершения
+  connect(qApp, &QApplication::aboutToQuit, this, [this]() {
+      if (qApp->isSavingSession()) {
+          SettingsManager::instance().settings().setValue("geometry", saveGeometry());
+          getPageTheme();
+      }
+  });
 }
 
 void MainWindow::restoreMainWindow() {
@@ -159,7 +167,11 @@ void MainWindow::updateWindowTheme() {
         "QWebEngineView{background:#F0F0F0;}"); // whatsapp light color
   }
 
-  QList<QWidget *> widgets = this->findChildren<QWidget *>();
+  QList<QWidget *> widgets;
+  const auto allWidgets = findChildren<QWidget *>();
+  for (QWidget *w : allWidgets) {
+      widgets.append(w);
+  }
   foreach (QWidget *w, widgets) {
     w->setPalette(qApp->palette());
   }
@@ -465,27 +477,43 @@ void MainWindow::showAbout() {
 }
 
 void MainWindow::closeEvent(QCloseEvent *event) {
+  // Проверяем, является ли событие частью завершения сеанса (системное выключение)
+  if (qApp->isSavingSession()) {
+      SettingsManager::instance().settings().setValue("geometry", saveGeometry());
+      getPageTheme();
+      event->accept();
+      qApp->quit(); // Немедленный выход без задержки
+      return;
+  }
+
+  // Оригинальная обработка для пользовательского закрытия
+  if (QCoreApplication::closingDown()) {
+      event->accept();
+      QMainWindow::closeEvent(event);
+      return;
+  }
+  
   SettingsManager::instance().settings().setValue("geometry", saveGeometry());
   getPageTheme();
   QTimer::singleShot(500, m_settingsWidget,
-                     [=]() { m_settingsWidget->refresh(); });
+                   [=]() { m_settingsWidget->refresh(); });
 
   if (QSystemTrayIcon::isSystemTrayAvailable() &&
       SettingsManager::instance()
-              .settings()
-              .value("closeButtonActionCombo", 0)
-              .toInt() == 0) {
-    this->hide();
-    event->ignore();
-    if (SettingsManager::instance()
             .settings()
-            .value("firstrun_tray", true)
-            .toBool()) {
-      showNotification(QApplication::applicationName(),
-                       tr("Minimized to system tray."));
-      SettingsManager::instance().settings().setValue("firstrun_tray", false);
-    }
-    return;
+            .value("closeButtonActionCombo", 0)
+            .toInt() == 0) {
+      this->hide();
+      event->ignore();
+      if (SettingsManager::instance()
+              .settings()
+              .value("firstrun_tray", true)
+              .toBool()) {
+          showNotification(QApplication::applicationName(),
+                     tr("Minimized to system tray. Click to Open."));
+          SettingsManager::instance().settings().setValue("firstrun_tray", false);
+      }
+      return;
   }
   event->accept();
   quitApp();
@@ -615,12 +643,15 @@ void MainWindow::createActions() {
 }
 
 void MainWindow::quitApp() {
-  SettingsManager::instance().settings().setValue("geometry", saveGeometry());
-  getPageTheme();
-  QTimer::singleShot(500, this, [=]() {
-    SettingsManager::instance().settings().setValue("firstrun_tray", true);
-    qApp->quit();
-  });
+  // Если это системное завершение - уже обработано в closeEvent
+  if (!qApp->isSavingSession()) {
+      SettingsManager::instance().settings().setValue("geometry", saveGeometry());
+      getPageTheme();
+      QTimer::singleShot(500, this, [=]() {
+          SettingsManager::instance().settings().setValue("firstrun_tray", true);
+          qApp->quit();
+      });
+  }
 }
 
 void MainWindow::createTrayIcon() {

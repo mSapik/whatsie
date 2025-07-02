@@ -336,12 +336,12 @@ Desideri ignorare il controllo di sicurezza e continuare?</translation>
         <translation type="vanished">Lascia una Recensione</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="84"/>
+        <location filename="../mainwindow.cpp" line="92"/>
         <source>Whatsie started minimized in system tray. Click to Open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="395"/>
+        <location filename="../mainwindow.cpp" line="407"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.
 
@@ -352,33 +352,28 @@ Imposta la password nelle Impostazioni.
 Aprire le Impostazioni ora?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="413"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Unlock to access Settings.</source>
         <translation>Sblocca per aprire le Impostazioni.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="428"/>
+        <location filename="../mainwindow.cpp" line="440"/>
         <source>Unable to initialize settings module.
 Webengine is not initialized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>Action required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Page needs to be reloaded to continue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="485"/>
-        <source>Minimized to system tray.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="566"/>
+        <location filename="../mainwindow.cpp" line="594"/>
         <source>Fullscreen</source>
         <translation>Schermo Intero</translation>
     </message>
@@ -387,67 +382,72 @@ Webengine is not initialized.</source>
         <translation type="vanished">Mi&amp;nimizza nella barra di sistema</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="572"/>
+        <location filename="../mainwindow.cpp" line="513"/>
+        <source>Minimized to system tray. Click to Open.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="600"/>
         <source>Mi&amp;nimize to tray</source>
         <translation>Mi&amp;nimizza nella barra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="580"/>
+        <location filename="../mainwindow.cpp" line="608"/>
         <source>&amp;Restore</source>
         <translation>&amp;Ripristina</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="584"/>
+        <location filename="../mainwindow.cpp" line="612"/>
         <source>Re&amp;load</source>
         <translation>Ricarica</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="590"/>
+        <location filename="../mainwindow.cpp" line="618"/>
         <source>Loc&amp;k</source>
         <translation>Blocca</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="595"/>
+        <location filename="../mainwindow.cpp" line="623"/>
         <source>&amp;Settings</source>
         <translation>Impo&amp;stazioni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="601"/>
+        <location filename="../mainwindow.cpp" line="629"/>
         <source>&amp;Toggle theme</source>
         <translation>Al&amp;terna tema</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="608"/>
+        <location filename="../mainwindow.cpp" line="636"/>
         <source>&amp;About</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="611"/>
+        <location filename="../mainwindow.cpp" line="639"/>
         <source>&amp;Quit</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="692"/>
+        <location filename="../mainwindow.cpp" line="723"/>
         <source>Require setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1028"/>
+        <location filename="../mainwindow.cpp" line="1059"/>
         <source>messages</source>
         <translation>messaggi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1028"/>
+        <location filename="../mainwindow.cpp" line="1059"/>
         <source>message</source>
         <translation>messaggio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1252"/>
+        <location filename="../mainwindow.cpp" line="1283"/>
         <source>Restored an already running instance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1027"/>
+        <location filename="../mainwindow.cpp" line="1058"/>
         <source>Restore</source>
         <translation>Ripristina</translation>
     </message>
@@ -456,13 +456,13 @@ Webengine is not initialized.</source>
         <translation type="obsolete">Impostazioni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="561"/>
-        <location filename="../mainwindow.cpp" line="1161"/>
+        <location filename="../mainwindow.cpp" line="589"/>
+        <location filename="../mainwindow.cpp" line="1192"/>
         <source>New Chat</source>
         <translation>Nuova Chat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1162"/>
+        <location filename="../mainwindow.cpp" line="1193"/>
         <source>Enter a valid WhatsApp number with country code (ex- +91XXXXXXXXXX)</source>
         <translation>Inserisci un numero WhatsApp valido con prefisso internazionale (es- +39XXXXXXXXXXXX)</translation>
     </message>
@@ -475,7 +475,7 @@ Webengine is not initialized.</source>
         <translation type="vanished">Numero di Telefono non Valido</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1199"/>
+        <location filename="../mainwindow.cpp" line="1230"/>
         <source>Unlock to Reload the App.</source>
         <translation>Sblocca per Ricaricare l&apos;App.</translation>
     </message>
@@ -668,7 +668,7 @@ Please setup the password in the Settings first.</source>
 Imposta la password nelle Impostazioni.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1197"/>
+        <location filename="../mainwindow.cpp" line="1228"/>
         <source>Reloading...</source>
         <translation>Caricamento...</translation>
     </message>
@@ -720,11 +720,13 @@ Imposta la password nelle Impostazioni.</translation>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="177"/>
+        <location filename="../settingswidget.cpp" line="58"/>
         <source>Dark</source>
         <translation>Scuro</translation>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="186"/>
+        <location filename="../settingswidget.cpp" line="57"/>
         <source>Light</source>
         <translation>Chiaro</translation>
     </message>
@@ -918,7 +920,7 @@ Imposta la password nelle Impostazioni.</translation>
     <message>
         <location filename="../settingswidget.ui" line="791"/>
         <location filename="../settingswidget.ui" line="825"/>
-        <location filename="../settingswidget.cpp" line="851"/>
+        <location filename="../settingswidget.cpp" line="863"/>
         <source>Change password</source>
         <translation>Cambia Password</translation>
     </message>
@@ -1005,68 +1007,68 @@ Imposta la password nelle Impostazioni.</translation>
         <translation>Dati persistenti</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="362"/>
+        <location filename="../settingswidget.cpp" line="372"/>
         <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="367"/>
+        <location filename="../settingswidget.cpp" line="377"/>
         <source>Delete Cookies and Quit Application?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="469"/>
+        <location filename="../settingswidget.cpp" line="478"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="470"/>
+        <location filename="../settingswidget.cpp" line="479"/>
         <source>Cannot set an empty UserAgent String.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="515"/>
+        <location filename="../settingswidget.cpp" line="524"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>Il cambio automatico del tema è stato disabilitato.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="554"/>
+        <location filename="../settingswidget.cpp" line="566"/>
         <source>App lock is not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="558"/>
+        <location filename="../settingswidget.cpp" line="570"/>
         <source>Do you want to setup App lock now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="618"/>
+        <location filename="../settingswidget.cpp" line="630"/>
         <source>Feature permissions</source>
         <translation>Permessi funzionalità</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="646"/>
+        <location filename="../settingswidget.cpp" line="658"/>
         <source>Automatic theme switcher setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="680"/>
+        <location filename="../settingswidget.cpp" line="692"/>
         <source>App Lock Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="681"/>
+        <location filename="../settingswidget.cpp" line="693"/>
         <source>Please setup the App lock password first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="790"/>
-        <location filename="../settingswidget.cpp" line="801"/>
+        <location filename="../settingswidget.cpp" line="802"/>
+        <location filename="../settingswidget.cpp" line="813"/>
         <source>Select download directory</source>
         <translation>Seleziona cartella scaricati</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="841"/>
+        <location filename="../settingswidget.cpp" line="853"/>
         <source>You are about to change your current app lock password!
 
 This will LogOut your current session.
@@ -1074,7 +1076,7 @@ You may also require a complete restart of Application!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="847"/>
+        <location filename="../settingswidget.cpp" line="859"/>
         <source>Do you want to proceed?</source>
         <translation type="unfinished"></translation>
     </message>

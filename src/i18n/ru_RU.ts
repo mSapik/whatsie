@@ -303,12 +303,12 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="84"/>
+        <location filename="../mainwindow.cpp" line="92"/>
         <source>Whatsie started minimized in system tray. Click to Open.</source>
         <translation>Whatsie запущен в системном трее. Нажмите, чтобы открыть.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="395"/>
+        <location filename="../mainwindow.cpp" line="407"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.
 
@@ -319,115 +319,119 @@ Open Settings now?</source>
 Открыть настройки сейчас?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="413"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Unlock to access Settings.</source>
         <translation>Разблокируйте для доступа к настройкам.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="428"/>
+        <location filename="../mainwindow.cpp" line="440"/>
         <source>Unable to initialize settings module.
 Webengine is not initialized.</source>
         <translation>Не удалось инициализировать модуль настроек.
 Webengine не инициализирован.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>Action required</source>
         <translation>Требуется действие.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Page needs to be reloaded to continue.</source>
         <translation>Для продолжения необходимо перезагрузить страницу.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="485"/>
         <source>Minimized to system tray.</source>
+        <translation type="vanished">Свернуто в системный трей.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="513"/>
+        <source>Minimized to system tray. Click to Open.</source>
         <translation>Свернуто в системный трей.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="561"/>
-        <location filename="../mainwindow.cpp" line="1161"/>
+        <location filename="../mainwindow.cpp" line="589"/>
+        <location filename="../mainwindow.cpp" line="1192"/>
         <source>New Chat</source>
         <translation>Новый чат</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="566"/>
+        <location filename="../mainwindow.cpp" line="594"/>
         <source>Fullscreen</source>
         <translation>Полноэкранный режим</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="572"/>
+        <location filename="../mainwindow.cpp" line="600"/>
         <source>Mi&amp;nimize to tray</source>
         <translation>Свернуть в трей</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="580"/>
+        <location filename="../mainwindow.cpp" line="608"/>
         <source>&amp;Restore</source>
         <translation>Восстановить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="584"/>
+        <location filename="../mainwindow.cpp" line="612"/>
         <source>Re&amp;load</source>
         <translation>Перезагрузить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="590"/>
+        <location filename="../mainwindow.cpp" line="618"/>
         <source>Loc&amp;k</source>
         <translation>Заблокировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="595"/>
+        <location filename="../mainwindow.cpp" line="623"/>
         <source>&amp;Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="601"/>
+        <location filename="../mainwindow.cpp" line="629"/>
         <source>&amp;Toggle theme</source>
         <translation>Переключить тему</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="608"/>
+        <location filename="../mainwindow.cpp" line="636"/>
         <source>&amp;About</source>
         <translation>О программе</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="611"/>
+        <location filename="../mainwindow.cpp" line="639"/>
         <source>&amp;Quit</source>
         <translation>Выйти</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="692"/>
+        <location filename="../mainwindow.cpp" line="723"/>
         <source>Require setup</source>
         <translation>Требуется настройка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1027"/>
+        <location filename="../mainwindow.cpp" line="1058"/>
         <source>Restore</source>
         <translation>Восстановить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1028"/>
+        <location filename="../mainwindow.cpp" line="1059"/>
         <source>messages</source>
         <translation>сообщения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1028"/>
+        <location filename="../mainwindow.cpp" line="1059"/>
         <source>message</source>
         <translation>сообщение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1162"/>
+        <location filename="../mainwindow.cpp" line="1193"/>
         <source>Enter a valid WhatsApp number with country code (ex- +91XXXXXXXXXX)</source>
         <translation>Введите действительный номер WhatsApp с кодом страны (например, +7XXXXXXXXXX)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1199"/>
+        <location filename="../mainwindow.cpp" line="1230"/>
         <source>Unlock to Reload the App.</source>
         <translation>Разблокируйте для перезагрузки приложения.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1252"/>
+        <location filename="../mainwindow.cpp" line="1283"/>
         <source>Restored an already running instance.</source>
         <translation>Восстановлен уже запущенный экземпляр.</translation>
     </message>
@@ -552,7 +556,7 @@ Please setup the password in the Settings first.</source>
 Сначала установите пароль в настройках.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1197"/>
+        <location filename="../mainwindow.cpp" line="1228"/>
         <source>Reloading...</source>
         <translation>Перезагрузка...</translation>
     </message>
@@ -657,11 +661,13 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="177"/>
+        <location filename="../settingswidget.cpp" line="58"/>
         <source>Dark</source>
         <translation>Темная</translation>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="186"/>
+        <location filename="../settingswidget.cpp" line="57"/>
         <source>Light</source>
         <translation>Светлая</translation>
     </message>
@@ -842,7 +848,7 @@ Please setup the password in the Settings first.</source>
     <message>
         <location filename="../settingswidget.ui" line="791"/>
         <location filename="../settingswidget.ui" line="825"/>
-        <location filename="../settingswidget.cpp" line="851"/>
+        <location filename="../settingswidget.cpp" line="863"/>
         <source>Change password</source>
         <translation>Изменить пароль</translation>
     </message>
@@ -918,68 +924,68 @@ Please setup the password in the Settings first.</source>
         <translation>Действие</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="362"/>
+        <location filename="../settingswidget.cpp" line="372"/>
         <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
         <translation>Это удалит Постоянные Данные! Постоянные данные включают в себя постоянные куки и кэш, а также завершит работу приложения.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="367"/>
+        <location filename="../settingswidget.cpp" line="377"/>
         <source>Delete Cookies and Quit Application?</source>
         <translation>Удалить куки и выйти из приложения?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="469"/>
+        <location filename="../settingswidget.cpp" line="478"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="470"/>
+        <location filename="../settingswidget.cpp" line="479"/>
         <source>Cannot set an empty UserAgent String.</source>
         <translation>Невозможно установить пустую строку UserAgent.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="515"/>
+        <location filename="../settingswidget.cpp" line="524"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>Автоматическое переключение темы отключено из-за ручного переключения темы.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="554"/>
+        <location filename="../settingswidget.cpp" line="566"/>
         <source>App lock is not configured.</source>
         <translation>Блокировка приложения не настроена.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="558"/>
+        <location filename="../settingswidget.cpp" line="570"/>
         <source>Do you want to setup App lock now?</source>
         <translation>Вы хотите настроить блокировку приложения сейчас?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="618"/>
+        <location filename="../settingswidget.cpp" line="630"/>
         <source>Feature permissions</source>
         <translation>Разрешения функций</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="646"/>
+        <location filename="../settingswidget.cpp" line="658"/>
         <source>Automatic theme switcher setup</source>
         <translation>Настройка автоматической смены темы.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="680"/>
+        <location filename="../settingswidget.cpp" line="692"/>
         <source>App Lock Setup</source>
         <translation>Настройка блокировки приложения.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="681"/>
+        <location filename="../settingswidget.cpp" line="693"/>
         <source>Please setup the App lock password first.</source>
         <translation>Пожалуйста, сначала установите пароль для блокировки приложения.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="790"/>
-        <location filename="../settingswidget.cpp" line="801"/>
+        <location filename="../settingswidget.cpp" line="802"/>
+        <location filename="../settingswidget.cpp" line="813"/>
         <source>Select download directory</source>
         <translation>Выберите папку для загрузки</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="841"/>
+        <location filename="../settingswidget.cpp" line="853"/>
         <source>You are about to change your current app lock password!
 
 This will LogOut your current session.
@@ -990,7 +996,7 @@ You may also require a complete restart of Application!</source>
 Вам также может потребоваться полный перезапуск приложения!</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="847"/>
+        <location filename="../settingswidget.cpp" line="859"/>
         <source>Do you want to proceed?</source>
         <translation>Вы хотите продолжить?</translation>
     </message>
